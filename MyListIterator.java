@@ -1,11 +1,11 @@
 /** Represents an iterator of a linked list. */
-public class ListIterator {
+public class MyListIterator {
 
     // current position in the list (cursor)
     public Node current;
 
     /** Constructs a list iterator, starting at the given node */
-    public ListIterator(Node node) {
+    public MyListIterator(Node node) {
         current = node;
     }
 

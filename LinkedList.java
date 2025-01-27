@@ -1,4 +1,4 @@
-
+import java.util.ListIterator;
 
 /**
  * Represents a list of Nodes. 
@@ -258,8 +258,8 @@ public class LinkedList {
 	/**
 	 * Returns an iterator over this list, starting with the first element.
 	 */
-	public ListIterator iterator(){
-		return new ListIterator(first);
+	public MyListIterator iterator(){
+		return new MyListIterator(first);
 	}
 	
 	/**
@@ -267,13 +267,12 @@ public class LinkedList {
 	 */
 	public String toString() {
 
-	Node current = first;
-    String representation = "";
-
-    for (int i = 0; i < size; i++) {
-        representation += current.toString() + " ";
-        current = current.next;
-    }
-    return representation;
-	}
+		String s = "";
+		Node current = first;
+		while (current != null) {
+		s = s + current.block + " ";
+		current = current.next;
+		}
+		return s;
+		}
 }
